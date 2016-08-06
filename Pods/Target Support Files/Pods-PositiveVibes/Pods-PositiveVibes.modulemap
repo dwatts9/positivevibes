@@ -1,0 +1,6 @@
+framework module Pods_PositiveVibes {
+  umbrella header "Pods-PositiveVibes-umbrella.h"
+
+  export *
+  module * { export * }
+}

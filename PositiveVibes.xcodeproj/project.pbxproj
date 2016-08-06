@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7EC0CBFB827859DECAB7C9D /* Pods_PositiveVibes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FE292CF7116EC87C8B2F0 /* Pods_PositiveVibes.framework */; };
 		DA7B2CDE1D568AD500513F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CDD1D568AD500513F6D /* AppDelegate.swift */; };
-		DA7B2CE01D568AD500513F6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CDF1D568AD500513F6D /* ViewController.swift */; };
+		DA7B2CE01D568AD500513F6D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CDF1D568AD500513F6D /* SignInVC.swift */; };
 		DA7B2CE31D568AD500513F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7B2CE11D568AD500513F6D /* Main.storyboard */; };
 		DA7B2CE51D568AD500513F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7B2CE41D568AD500513F6D /* Assets.xcassets */; };
 		DA7B2CE81D568AD500513F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7B2CE61D568AD500513F6D /* LaunchScreen.storyboard */; };
+		DA7B2CF01D568BA800513F6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA7B2CEF1D568BA800513F6D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		379A814522639DF89F78701C /* Pods-PositiveVibes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PositiveVibes.release.xcconfig"; path = "Pods/Target Support Files/Pods-PositiveVibes/Pods-PositiveVibes.release.xcconfig"; sourceTree = "<group>"; };
+		BEEE4204112B912934F7944E /* Pods-PositiveVibes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PositiveVibes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PositiveVibes/Pods-PositiveVibes.debug.xcconfig"; sourceTree = "<group>"; };
+		D89FE292CF7116EC87C8B2F0 /* Pods_PositiveVibes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PositiveVibes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7B2CDA1D568AD500513F6D /* PositiveVibes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositiveVibes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7B2CDD1D568AD500513F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA7B2CDF1D568AD500513F6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA7B2CDF1D568AD500513F6D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		DA7B2CE21D568AD500513F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA7B2CE41D568AD500513F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA7B2CE71D568AD500513F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA7B2CE91D568AD500513F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA7B2CEF1D568BA800513F6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7EC0CBFB827859DECAB7C9D /* Pods_PositiveVibes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7825E514ABBE2CBF824676B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D89FE292CF7116EC87C8B2F0 /* Pods_PositiveVibes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8293910C5B05F6E544765F0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEEE4204112B912934F7944E /* Pods-PositiveVibes.debug.xcconfig */,
+				379A814522639DF89F78701C /* Pods-PositiveVibes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA7B2CD11D568AD500513F6D = {
 			isa = PBXGroup;
 			children = (
 				DA7B2CDC1D568AD500513F6D /* PositiveVibes */,
 				DA7B2CDB1D568AD500513F6D /* Products */,
+				8293910C5B05F6E544765F0E /* Pods */,
+				7825E514ABBE2CBF824676B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,39 @@
 		DA7B2CDC1D568AD500513F6D /* PositiveVibes */ = {
 			isa = PBXGroup;
 			children = (
+				DA7B2CF31D568F6D00513F6D /* Model */,
+				DA7B2CF21D568F6800513F6D /* View */,
+				DA7B2CF11D568F6200513F6D /* Controller */,
 				DA7B2CDD1D568AD500513F6D /* AppDelegate.swift */,
-				DA7B2CDF1D568AD500513F6D /* ViewController.swift */,
 				DA7B2CE11D568AD500513F6D /* Main.storyboard */,
 				DA7B2CE41D568AD500513F6D /* Assets.xcassets */,
 				DA7B2CE61D568AD500513F6D /* LaunchScreen.storyboard */,
 				DA7B2CE91D568AD500513F6D /* Info.plist */,
+				DA7B2CEF1D568BA800513F6D /* GoogleService-Info.plist */,
 			);
 			path = PositiveVibes;
+			sourceTree = "<group>";
+		};
+		DA7B2CF11D568F6200513F6D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA7B2CDF1D568AD500513F6D /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DA7B2CF21D568F6800513F6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DA7B2CF31D568F6D00513F6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA7B2CEC1D568AD500513F6D /* Build configuration list for PBXNativeTarget "PositiveVibes" */;
 			buildPhases = (
+				403C446B5ED01304FD9FDB06 /* [CP] Check Pods Manifest.lock */,
 				DA7B2CD61D568AD500513F6D /* Sources */,
 				DA7B2CD71D568AD500513F6D /* Frameworks */,
 				DA7B2CD81D568AD500513F6D /* Resources */,
+				4696EE01226B92F1D990BD78 /* [CP] Embed Pods Frameworks */,
+				E689B66DB5E8EF479177E1B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7B2CF01D568BA800513F6D /* GoogleService-Info.plist in Resources */,
 				DA7B2CE81D568AD500513F6D /* LaunchScreen.storyboard in Resources */,
 				DA7B2CE51D568AD500513F6D /* Assets.xcassets in Resources */,
 				DA7B2CE31D568AD500513F6D /* Main.storyboard in Resources */,
@@ -132,12 +187,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		403C446B5ED01304FD9FDB06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4696EE01226B92F1D990BD78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PositiveVibes/Pods-PositiveVibes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E689B66DB5E8EF479177E1B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PositiveVibes/Pods-PositiveVibes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA7B2CD61D568AD500513F6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7B2CE01D568AD500513F6D /* ViewController.swift in Sources */,
+				DA7B2CE01D568AD500513F6D /* SignInVC.swift in Sources */,
 				DA7B2CDE1D568AD500513F6D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +285,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -232,6 +336,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -259,6 +364,7 @@
 		};
 		DA7B2CED1D568AD500513F6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEEE4204112B912934F7944E /* Pods-PositiveVibes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M2YHM7MRYW;
@@ -272,6 +378,7 @@
 		};
 		DA7B2CEE1D568AD500513F6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 379A814522639DF89F78701C /* Pods-PositiveVibes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M2YHM7MRYW;
@@ -302,6 +409,7 @@
 				DA7B2CEE1D568AD500513F6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
