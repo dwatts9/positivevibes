@@ -19,6 +19,7 @@
 		DA7B2CFB1D577C8C00513F6D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CFA1D577C8C00513F6D /* RoundButton.swift */; };
 		DA7B2CFD1D577E9C00513F6D /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CFC1D577E9C00513F6D /* FancyField.swift */; };
 		DA7B2CFF1D57806200513F6D /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CFE1D57806200513F6D /* FancyButton.swift */; };
+		DA7B2D021D57DF2C00513F6D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D011D57DF2C00513F6D /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		DA7B2CFC1D577E9C00513F6D /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		DA7B2CFE1D57806200513F6D /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		DA7B2D001D57A6A200513F6D /* PositiveVibes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PositiveVibes.entitlements; sourceTree = "<group>"; };
+		DA7B2D011D57DF2C00513F6D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DA7B2CDF1D568AD500513F6D /* SignInVC.swift */,
+				DA7B2D011D57DF2C00513F6D /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 					DA7B2CD91D568AD500513F6D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = M2YHM7MRYW;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -274,6 +278,7 @@
 				DA7B2CE01D568AD500513F6D /* SignInVC.swift in Sources */,
 				DA7B2CFB1D577C8C00513F6D /* RoundButton.swift in Sources */,
 				DA7B2CFF1D57806200513F6D /* FancyButton.swift in Sources */,
+				DA7B2D021D57DF2C00513F6D /* FeedVC.swift in Sources */,
 				DA7B2CDE1D568AD500513F6D /* AppDelegate.swift in Sources */,
 				DA7B2CF51D57781700513F6D /* FancyView.swift in Sources */,
 				DA7B2CF91D5779D000513F6D /* Constants.swift in Sources */,
