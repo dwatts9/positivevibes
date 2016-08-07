@@ -38,6 +38,7 @@
 		DA7B2CFA1D577C8C00513F6D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		DA7B2CFC1D577E9C00513F6D /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		DA7B2CFE1D57806200513F6D /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		DA7B2D001D57A6A200513F6D /* PositiveVibes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PositiveVibes.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 		DA7B2CDC1D568AD500513F6D /* PositiveVibes */ = {
 			isa = PBXGroup;
 			children = (
+				DA7B2D001D57A6A200513F6D /* PositiveVibes.entitlements */,
 				DA7B2CF71D5779C200513F6D /* Util */,
 				DA7B2CF31D568F6D00513F6D /* Model */,
 				DA7B2CF21D568F6800513F6D /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = M2YHM7MRYW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -395,6 +402,7 @@
 			baseConfigurationReference = BEEE4204112B912934F7944E /* Pods-PositiveVibes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PositiveVibes/PositiveVibes.entitlements;
 				DEVELOPMENT_TEAM = M2YHM7MRYW;
 				INFOPLIST_FILE = PositiveVibes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -409,6 +417,7 @@
 			baseConfigurationReference = 379A814522639DF89F78701C /* Pods-PositiveVibes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PositiveVibes/PositiveVibes.entitlements;
 				DEVELOPMENT_TEAM = M2YHM7MRYW;
 				INFOPLIST_FILE = PositiveVibes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
