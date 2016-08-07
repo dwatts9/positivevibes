@@ -14,6 +14,11 @@
 		DA7B2CE51D568AD500513F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7B2CE41D568AD500513F6D /* Assets.xcassets */; };
 		DA7B2CE81D568AD500513F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7B2CE61D568AD500513F6D /* LaunchScreen.storyboard */; };
 		DA7B2CF01D568BA800513F6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA7B2CEF1D568BA800513F6D /* GoogleService-Info.plist */; };
+		DA7B2CF51D57781700513F6D /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CF41D57781700513F6D /* FancyView.swift */; };
+		DA7B2CF91D5779D000513F6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CF81D5779D000513F6D /* Constants.swift */; };
+		DA7B2CFB1D577C8C00513F6D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CFA1D577C8C00513F6D /* RoundButton.swift */; };
+		DA7B2CFD1D577E9C00513F6D /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CFC1D577E9C00513F6D /* FancyField.swift */; };
+		DA7B2CFF1D57806200513F6D /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CFE1D57806200513F6D /* FancyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		DA7B2CE71D568AD500513F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA7B2CE91D568AD500513F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7B2CEF1D568BA800513F6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA7B2CF41D57781700513F6D /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		DA7B2CF81D5779D000513F6D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA7B2CFA1D577C8C00513F6D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		DA7B2CFC1D577E9C00513F6D /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		DA7B2CFE1D57806200513F6D /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		DA7B2CDC1D568AD500513F6D /* PositiveVibes */ = {
 			isa = PBXGroup;
 			children = (
+				DA7B2CF71D5779C200513F6D /* Util */,
 				DA7B2CF31D568F6D00513F6D /* Model */,
 				DA7B2CF21D568F6800513F6D /* View */,
 				DA7B2CF11D568F6200513F6D /* Controller */,
@@ -104,6 +115,10 @@
 		DA7B2CF21D568F6800513F6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA7B2CF41D57781700513F6D /* FancyView.swift */,
+				DA7B2CFA1D577C8C00513F6D /* RoundButton.swift */,
+				DA7B2CFC1D577E9C00513F6D /* FancyField.swift */,
+				DA7B2CFE1D57806200513F6D /* FancyButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -113,6 +128,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		DA7B2CF71D5779C200513F6D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DA7B2CF81D5779D000513F6D /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7B2CFD1D577E9C00513F6D /* FancyField.swift in Sources */,
 				DA7B2CE01D568AD500513F6D /* SignInVC.swift in Sources */,
+				DA7B2CFB1D577C8C00513F6D /* RoundButton.swift in Sources */,
+				DA7B2CFF1D57806200513F6D /* FancyButton.swift in Sources */,
 				DA7B2CDE1D568AD500513F6D /* AppDelegate.swift in Sources */,
+				DA7B2CF51D57781700513F6D /* FancyView.swift in Sources */,
+				DA7B2CF91D5779D000513F6D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
