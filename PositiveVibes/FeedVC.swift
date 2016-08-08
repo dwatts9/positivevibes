@@ -16,8 +16,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        //this initializes the listener (listening for changes that happen on the app) REF_POSTS will listen to the posts
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            print(snapshot.value)
+        })
         
     }
     
@@ -33,9 +38,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }
     
-    
-    
-
     @IBAction func signOutTapped(_ sender: AnyObject) {
         //need to sign out of firebase first and then remove ID from the keychain
         try!FIRAuth.auth()?.signOut()

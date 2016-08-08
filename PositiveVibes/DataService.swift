@@ -34,7 +34,7 @@ class DataService {
     //getting the data from firebase
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
         
-        //this looks at the users, the userID and all the data under that (posts and likes and provider) and updating it with the data thats is being passed in
+        //this looks at the users, the userID and all the data under that (posts and likes and provider) and updating it with the data thats is being passed in. this one line is all i need to write data to firebase 
         REF_USERS.child(uid).updateChildValues(userData)
         
         

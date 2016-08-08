@@ -67,6 +67,7 @@ class SignInVC: UIViewController {
         })
     
     }
+    
     //this will check the email and has error handling
     @IBAction func signInTapped(_ sender: AnyObject) {
         //check if theres actually text in the field
@@ -95,6 +96,7 @@ class SignInVC: UIViewController {
         }
     }
     
+    //once you have completed the sign in and log in to the app, the DataServive will create a user with an id and userData
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
