@@ -191,14 +191,14 @@
                                     <constraint firstItem="EFo-Cp-vWw" firstAttribute="leading" secondItem="utx-kI-BbL" secondAttribute="leading" constant="8" id="aTt-XT-xdO"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="342" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IWx-WR-g17">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="342" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IWx-WR-g17">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="342" id="X4m-fx-Jwn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="342" id="X4m-fx-Jwn" customClass="PostCell" customModule="PositiveVibes" customModuleProvider="target">
                                         <frame key="frameInset" minY="28" width="375" height="342"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4m-fx-Jwn" id="A8P-HU-dnW">
-                                            <frame key="frameInset" width="375" height="341"/>
+                                            <frame key="frameInset" width="375" height="342"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmq-dZ-EFK" customClass="FancyView" customModule="PositiveVibes" customModuleProvider="target">
@@ -218,7 +218,7 @@
                                                                             <color key="textColor" red="0.93725490199999995" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="8d1-sR-GXV" customClass="CircleView" customModule="PositiveVibes" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="8d1-sR-GXV">
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="60" id="HIM-Mf-Moc"/>
                                                                                 <constraint firstAttribute="width" constant="60" id="ORT-ON-3OQ"/>
@@ -229,6 +229,9 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="8wD-pJ-aiu"/>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fDY-PZ-Fva">
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Zwr-X2-6CX"/>
+                                                                    </constraints>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -239,12 +242,12 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsx-cg-Q4E">
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.85134698275862064" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BC-ZV-QB2">
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.91233836206896557" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -261,6 +264,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Pmq-dZ-EFK" secondAttribute="trailing" constant="16" id="KUW-7m-QBD"/>
                                                 <constraint firstAttribute="bottom" secondItem="Pmq-dZ-EFK" secondAttribute="bottom" constant="8" id="VGs-Fh-7lU"/>
@@ -268,15 +272,22 @@
                                                 <constraint firstItem="Pmq-dZ-EFK" firstAttribute="leading" secondItem="A8P-HU-dnW" secondAttribute="leading" constant="16" id="zlI-Sv-M4D"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="fDY-PZ-Fva" id="luQ-4v-0bC"/>
+                                            <outlet property="likesLabel" destination="5BC-ZV-QB2" id="Wt3-CR-hQS"/>
+                                            <outlet property="postImage" destination="8wD-pJ-aiu" id="NJv-8J-Zqv"/>
+                                            <outlet property="profileImage" destination="G1b-uE-y1t" id="6LR-e8-Gcy"/>
+                                            <outlet property="usernameLabel" destination="U7p-Sa-Yoh" id="e9t-il-yak"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.34722521551724139" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XUf-ew-Cfe" firstAttribute="top" secondItem="tbT-yj-6bp" secondAttribute="top" id="EYZ-R9-rXN"/>
                             <constraint firstItem="UVN-mK-lQE" firstAttribute="top" secondItem="IWx-WR-g17" secondAttribute="bottom" id="GKg-kL-mB4"/>
-                            <constraint firstItem="IWx-WR-g17" firstAttribute="top" secondItem="utx-kI-BbL" secondAttribute="bottom" constant="16" id="GQX-6J-kJs"/>
+                            <constraint firstItem="IWx-WR-g17" firstAttribute="top" secondItem="utx-kI-BbL" secondAttribute="bottom" constant="8" id="GQX-6J-kJs"/>
                             <constraint firstAttribute="trailing" secondItem="IWx-WR-g17" secondAttribute="trailing" id="HOx-df-iLp"/>
                             <constraint firstAttribute="trailing" secondItem="XUf-ew-Cfe" secondAttribute="trailing" id="HkT-FH-EUo"/>
                             <constraint firstItem="utx-kI-BbL" firstAttribute="top" secondItem="XUf-ew-Cfe" secondAttribute="bottom" constant="15" id="YpW-eB-9gf"/>
@@ -287,12 +298,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="IWx-WR-g17" id="qVr-fZ-ksb"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignInScreen" id="LWV-3e-XnA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeP-nu-0Gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="40.929535232383813"/>
+            <point key="canvasLocation" x="807" y="37"/>
         </scene>
     </scenes>
     <resources>

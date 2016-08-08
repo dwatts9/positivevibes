@@ -21,6 +21,7 @@
 		DA7B2CFF1D57806200513F6D /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2CFE1D57806200513F6D /* FancyButton.swift */; };
 		DA7B2D021D57DF2C00513F6D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D011D57DF2C00513F6D /* FeedVC.swift */; };
 		DA7B2D041D57F2AA00513F6D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D031D57F2AA00513F6D /* CircleView.swift */; };
+		DA7B2D061D58093300513F6D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D051D58093300513F6D /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		DA7B2D001D57A6A200513F6D /* PositiveVibes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PositiveVibes.entitlements; sourceTree = "<group>"; };
 		DA7B2D011D57DF2C00513F6D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		DA7B2D031D57F2AA00513F6D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		DA7B2D051D58093300513F6D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				DA7B2CFC1D577E9C00513F6D /* FancyField.swift */,
 				DA7B2CFE1D57806200513F6D /* FancyButton.swift */,
 				DA7B2D031D57F2AA00513F6D /* CircleView.swift */,
+				DA7B2D051D58093300513F6D /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				DA7B2CDE1D568AD500513F6D /* AppDelegate.swift in Sources */,
 				DA7B2CF51D57781700513F6D /* FancyView.swift in Sources */,
 				DA7B2CF91D5779D000513F6D /* Constants.swift in Sources */,
+				DA7B2D061D58093300513F6D /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
