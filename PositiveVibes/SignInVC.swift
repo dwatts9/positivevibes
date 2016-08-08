@@ -59,7 +59,9 @@ class SignInVC: UIViewController {
                 print("DW: Successfully authenticated with Firebase")
                 if let user = user {
                     //this user.uid is coming from the completion handler up above
-                    self.completeSignIn(id: user.uid)
+                    //could do more than the provider like posts and likes from that user but he lazy(uses creditial instead of user.
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
         })
@@ -73,7 +75,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("DW: Email user authenticate with Firebase")
                     if let user = user {
-                    self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -82,7 +85,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("DW: Successfully authenticated with Firebase")
                             if let user = user {
-                            self.completeSignIn(id: user.uid)
+                            let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -91,7 +95,8 @@ class SignInVC: UIViewController {
         }
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         print("DW: Data saved to keychain \(keychainResult)")
         //putting this here will make it go to the new VC once its get authenicated for a automatic sign in

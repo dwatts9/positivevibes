@@ -134,7 +134,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUf-ew-Cfe" customClass="FancyView" customModule="PositiveVibes" customModuleProvider="target">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-P1-PTN">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-P1-PTN">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="B64-Ve-GJ7"/>
                                             <constraint firstAttribute="height" constant="41" id="WbQ-4u-fda"/>
@@ -147,6 +147,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="Y6S-P1-PTN" firstAttribute="top" secondItem="XUf-ew-Cfe" secondAttribute="top" constant="20" id="BMH-2k-pqi"/>
                                     <constraint firstItem="Y6S-P1-PTN" firstAttribute="leading" secondItem="XUf-ew-Cfe" secondAttribute="leading" constant="16" id="COg-h8-in2"/>
@@ -154,6 +155,9 @@
                                     <constraint firstItem="9d8-cj-wQS" firstAttribute="centerX" secondItem="XUf-ew-Cfe" secondAttribute="centerX" id="j1j-jp-M1d"/>
                                     <constraint firstAttribute="height" constant="65" id="trQ-Uw-loV"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fte-bf-5wL" appends="YES" id="L5L-5R-UXq"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utx-kI-BbL" customClass="FancyView" customModule="PositiveVibes" customModuleProvider="target">
                                 <subviews>
@@ -303,6 +307,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeP-nu-0Gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fte-bf-5wL">
+                    <connections>
+                        <action selector="signOutTapped:" destination="CVC-GE-MN9" id="Gl1-oE-Thn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="807" y="37"/>
         </scene>

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PositiveVibes/SignInVC.swift"
-            timestampString = "492298677.161811"
+            timestampString = "492318652.235332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "signInTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

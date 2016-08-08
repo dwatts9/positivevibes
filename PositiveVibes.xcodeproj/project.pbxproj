@@ -22,6 +22,7 @@
 		DA7B2D021D57DF2C00513F6D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D011D57DF2C00513F6D /* FeedVC.swift */; };
 		DA7B2D041D57F2AA00513F6D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D031D57F2AA00513F6D /* CircleView.swift */; };
 		DA7B2D061D58093300513F6D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D051D58093300513F6D /* PostCell.swift */; };
+		DA7B2D091D58240200513F6D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B2D081D58240200513F6D /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		DA7B2D011D57DF2C00513F6D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		DA7B2D031D57F2AA00513F6D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		DA7B2D051D58093300513F6D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		DA7B2D081D58240200513F6D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				DA7B2D001D57A6A200513F6D /* PositiveVibes.entitlements */,
+				DA7B2D071D5823E800513F6D /* Services */,
 				DA7B2CF71D5779C200513F6D /* Util */,
 				DA7B2CF31D568F6D00513F6D /* Model */,
 				DA7B2CF21D568F6800513F6D /* View */,
@@ -147,6 +150,14 @@
 				DA7B2CF81D5779D000513F6D /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		DA7B2D071D5823E800513F6D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA7B2D081D58240200513F6D /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				DA7B2CE01D568AD500513F6D /* SignInVC.swift in Sources */,
 				DA7B2CFB1D577C8C00513F6D /* RoundButton.swift in Sources */,
 				DA7B2CFF1D57806200513F6D /* FancyButton.swift in Sources */,
+				DA7B2D091D58240200513F6D /* DataService.swift in Sources */,
 				DA7B2D021D57DF2C00513F6D /* FeedVC.swift in Sources */,
 				DA7B2CDE1D568AD500513F6D /* AppDelegate.swift in Sources */,
 				DA7B2CF51D57781700513F6D /* FancyView.swift in Sources */,
