@@ -14,10 +14,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: CircleView!
+    @IBOutlet weak var captionField: FancyField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,22 +63,24 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl) {
-            cell.configureCell(post: post, img: img)
+                cell.configureCell(post: post, img: img)
                 return cell
             } else {
                 cell.configureCell(post: post)
             }
-             return cell
-        
+            return cell
+            
         } else {
             return PostCell()
         }
     }
+    
     //this is for when the image is picked it will disappear
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         //it because im letting them edit the image
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
             print("DW: A valid image wasnt selected")
         }
@@ -88,6 +92,36 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func postButtonTapped(_ sender: AnyObject) {
+        guard let caption = captionField.text, caption != "" else {
+            //should put an alert here or highlight the textfield to let them know that it aint right
+            print("DW: Caption must be entered")
+            return
+        }
+        //the imageSelected was set to a boolean so now the only way the rest of the code will run after the guard is to have a image selected, this stops the ability to upload post with no image
+        guard let img = addImage.image, imageSelected == true else {
+            print("DW: An image must be selected")
+            return
+        }
+        //actually uploading the image/ converting the image into imagedata/ and compressing
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            //create a uid random string attachment
+            let imgUid = NSUUID().uuidString
+            
+            //this tells firebase what type of image it is
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpg"
+            //using the child value for this particular image
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metaData) { (metaData, error) in
+                if error != nil {
+                    print("DW: Unable to upload image to firebase storage")
+                } else {
+                    print("DW: Successfully loaded image to firebase storage")
+                    let downloadURL = metaData?.downloadURL()?.absoluteString
+                }
+            }
+        }
+    }
     
     @IBAction func signOutTapped(_ sender: AnyObject) {
         //need to sign out of firebase first and then remove ID from the keychain

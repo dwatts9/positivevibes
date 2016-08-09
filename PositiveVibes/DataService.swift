@@ -27,7 +27,7 @@ class DataService {
     private var _REF_USERS = DB_BASE.child("user")
     
     //Storage references (posts-pic is the name of the folder
-    private var _REF_POST_IMAGES = STORAGE_BASE.child("posts-pics")
+    private var _REF_POST_IMAGES = STORAGE_BASE.child("post-pics")
 
     
     //made so no one can reference the private vars
