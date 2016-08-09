@@ -107,7 +107,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         if let imgData = UIImageJPEGRepresentation(img, 0.2) {
             //create a uid random string attachment
             let imgUid = NSUUID().uuidString
-            
             //this tells firebase what type of image it is
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/jpg"
@@ -118,9 +117,31 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 } else {
                     print("DW: Successfully loaded image to firebase storage")
                     let downloadURL = metaData?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                    self.postToFirebase(imgUrl: url)
+                        
+                    }
                 }
             }
         }
+    }
+    //this info is from firebase and matches directly
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, AnyObject> = [
+            "caption": captionField.text!,
+            "imageUrl": imgUrl,
+            "likes": 0
+            ]
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        //reset back to the original
+        captionField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
+        
     }
     
     @IBAction func signOutTapped(_ sender: AnyObject) {
