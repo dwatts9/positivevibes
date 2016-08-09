@@ -21,6 +21,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
         //this initializes the listener (listening for changes that happen on the app) REF_POSTS will listen to the posts
         //Get the data of the posts could be the user
         //getting the children from the JSON whic his the uid with snapshot children
@@ -36,7 +37,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     }
                 }
             }
-            //when the listener finishes listening you have to reload the tableView Data
+            //when the listener finishes listening you have to reload the tableView Data, when you dont see the tableView
             self.tableView.reloadData()
         })
     }
@@ -50,13 +51,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //just to check if things are working
-        
         let post = posts[indexPath.row]
-        print("DW: \(post.caption)")
-        
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
-        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            cell.configureCell(post: post)
+            return cell
+        } else {
+            return PostCell()
+        }
     }
     
     @IBAction func signOutTapped(_ sender: AnyObject) {
