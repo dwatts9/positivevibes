@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import SwiftKeychainWrapper
 
 //global outside of the class. this goes into google service info plist and getting the url with the appname from Firebase
 let DB_BASE = FIRDatabase.database().reference()
@@ -40,10 +41,18 @@ class DataService {
     var REF_USERS: FIRDatabaseReference {
         return _REF_USERS
     }
+    //getting the current user
+    var REF_USER_CURRENT: FIRDatabaseReference {
+     let uid = KeychainWrapper.stringForKey(KEY_UID)
+     let user = REF_USERS.child(uid!)
+        return user
+    }
     
     var REF_POST_IMAGES: FIRStorageReference {
         return _REF_POST_IMAGES
     }
+    
+    
     
     //getting the data from firebase
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
